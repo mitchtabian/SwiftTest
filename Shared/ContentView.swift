@@ -15,6 +15,7 @@ struct ContentView: View {
                 "Enter your name",
                 text: $name
             )
+            Text("Your name is \(name)")
         }
     }
 }
