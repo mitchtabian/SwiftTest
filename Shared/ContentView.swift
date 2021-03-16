@@ -7,9 +7,29 @@
 
 import SwiftUI
 
+struct GridStack<Content: View>: View {
+    let rows: Int
+    let columns: Int
+    let content: (Int, Int) -> Content
+    
+    var body: some View {
+        VStack{
+            ForEach(0 ..< rows){ row in
+                HStack{
+                    ForEach(0 ..< columns){column in
+                        content(row, column)
+                    }
+                }
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        Text("hello")
+        GridStack(rows: 4, columns: 4){row, col in
+            Text("R\(row) C\(col)")
+        }
     }
 }
 
