@@ -22,7 +22,6 @@ struct ContentView: View {
         let tipValue = orderAmount / 100 * tipSelection
         let grandTotal = orderAmount + tipValue
         let amountPerPerson = grandTotal / peopleCount
-        
         return amountPerPerson
     }
     var body: some View {
