@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var wakeUp = Date()
     var body: some View {
-        Text("hello")
+        Form{
+            DatePicker(
+                "Please enter a date",
+                selection: $wakeUp,
+                in: Date()...,
+                displayedComponents: .date
+            )
+        }
     }
 }
 
