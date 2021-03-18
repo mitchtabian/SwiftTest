@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("hello")
+        VStack{
+            GeometryReader{ geo in
+                Image("Codingwithmitch")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geo.size.width)
+            }
+            
+        }
     }
 }
 
