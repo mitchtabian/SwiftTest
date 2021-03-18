@@ -13,6 +13,8 @@
 		222AB0A9260000DF0029163E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AB094260000DE0029163E /* ContentView.swift */; };
 		222AB0AA260000DF0029163E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222AB095260000DF0029163E /* Assets.xcassets */; };
 		222AB0AB260000DF0029163E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222AB095260000DF0029163E /* Assets.xcassets */; };
+		224EA0CF2603C05D009DEDD4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EA0CE2603C05D009DEDD4 /* AddView.swift */; };
+		224EA0D02603C05D009DEDD4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EA0CE2603C05D009DEDD4 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		222AB0A2260000DF0029163E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222AB0A4260000DF0029163E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222AB0A5260000DF0029163E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		224EA0CE2603C05D009DEDD4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			children = (
 				222AB093260000DE0029163E /* testApp.swift */,
 				222AB094260000DE0029163E /* ContentView.swift */,
+				224EA0CE2603C05D009DEDD4 /* AddView.swift */,
 				222AB095260000DF0029163E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -189,6 +193,7 @@
 			files = (
 				222AB0A8260000DF0029163E /* ContentView.swift in Sources */,
 				222AB0A6260000DF0029163E /* testApp.swift in Sources */,
+				224EA0CF2603C05D009DEDD4 /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 			files = (
 				222AB0A9260000DF0029163E /* ContentView.swift in Sources */,
 				222AB0A7260000DF0029163E /* testApp.swift in Sources */,
+				224EA0D02603C05D009DEDD4 /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
