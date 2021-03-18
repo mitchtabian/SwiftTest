@@ -24,6 +24,7 @@
 		222AB0A2260000DF0029163E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222AB0A4260000DF0029163E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222AB0A5260000DF0029163E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		224EA10A2603E265009DEDD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 		222AB08D260000DE0029163E = {
 			isa = PBXGroup;
 			children = (
+				224EA10A2603E265009DEDD4 /* README.md */,
 				222AB092260000DE0029163E /* Shared */,
 				222AB09C260000DF0029163E /* iOS */,
 				222AB0A3260000DF0029163E /* macOS */,
