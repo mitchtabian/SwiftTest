@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("hello")
+        NavigationView{
+            List(0..<100){ row in
+                NavigationLink(
+                    destination: Text("Detail \(row)")){
+                        Text("Row \(row)")
+                }
+            }
+            .navigationBarTitle("SwiftUI")
+        }
     }
 }
 
