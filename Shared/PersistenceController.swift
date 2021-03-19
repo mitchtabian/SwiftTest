@@ -8,7 +8,9 @@
 import CoreData
 
 struct PersistenceController {
-    static let bookworm = PersistenceController()
+    
+    static let coreDataFile = PersistenceController()
+    let coreDataFileName = "CoreDataFile"
 
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
@@ -25,7 +27,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Bookworm")
+        container = NSPersistentContainer(name: coreDataFileName)
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
