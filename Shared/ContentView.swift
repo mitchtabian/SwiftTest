@@ -10,33 +10,58 @@ import CoreData
 
 struct ContentView: View {
     
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(entity: Student.entity(),sortDescriptors: []) private var students: FetchedResults<Student>
+    @Environment(\.managedObjectContext) var viewContext
+    
+    @FetchRequest(
+        entity: Book.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Book.title,ascending: true),
+            NSSortDescriptor(keyPath: \Book.author, ascending: true)
+        ]
+    )
+    var books: FetchedResults<Book>
+    
+    @State private var showingAddScreen = false
     
     var body: some View {
-        VStack{
+        NavigationView{
             List{
-                ForEach(students, id: \.id){ student in
-                    Text(student.name ?? "Unknown")
+                ForEach(books, id: \.self){ book in
+                    NavigationLink(
+                        destination: DetailView(book: book),
+                        label: {
+                            EmojiRatingView(rating: book.rating)
+                                .font(.largeTitle)
+                            VStack(alignment: .leading){
+                                Text(book.title ?? "Unknown title")
+                                    .font(.headline)
+                                Text(book.author ?? "Unknown author")
+                                    .foregroundColor(.secondary)
+                            }
+                        })
                 }
+                .onDelete(perform: deleteBooks)
             }
-            
-            Button("Add"){
-                let firstNames = ["Ginny", "Harry", "Herione", "Luna", "Ron"]
-                let lastNames = ["Granger", "Lovegood", "Potter", "Weasley"]
-                
-                let chosenFirstName = firstNames.randomElement()!
-                let chosenLastName = lastNames.randomElement()!
-                
-                let student = Student(context: self.viewContext)
-                student.id = UUID()
-                student.name = "\(chosenFirstName) \(chosenLastName)"
-                
-                try? self.viewContext.save()
-                
-            }
+            .navigationBarTitle("Bookworm")
+            .navigationBarItems(leading: EditButton(),trailing:
+                Button(action: {
+                    self.showingAddScreen.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                })
+                .sheet(isPresented: $showingAddScreen, content: {
+                    AddBookView().environment(\.managedObjectContext, self.viewContext)
+                })
+            )
         }
+    }
+    
+    func deleteBooks(at offsets: IndexSet){
+        for offset in offsets{
+            let book = books[offset]
+            viewContext.delete(book)
+        }
+        try? viewContext.save()
     }
 }
 
