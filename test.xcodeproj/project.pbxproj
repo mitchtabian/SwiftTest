@@ -13,6 +13,10 @@
 		222AB0A9260000DF0029163E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222AB094260000DE0029163E /* ContentView.swift */; };
 		222AB0AA260000DF0029163E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222AB095260000DF0029163E /* Assets.xcassets */; };
 		222AB0AB260000DF0029163E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222AB095260000DF0029163E /* Assets.xcassets */; };
+		229069AB26050A92009373FC /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 229069A926050A92009373FC /* Bookworm.xcdatamodeld */; };
+		229069AC26050A92009373FC /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 229069A926050A92009373FC /* Bookworm.xcdatamodeld */; };
+		229069E526050CCF009373FC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229069E426050CCF009373FC /* PersistenceController.swift */; };
+		229069E626050CCF009373FC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229069E426050CCF009373FC /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		222AB0A2260000DF0029163E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222AB0A4260000DF0029163E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222AB0A5260000DF0029163E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		229069AA26050A92009373FC /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
+		229069E426050CCF009373FC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 				222AB093260000DE0029163E /* testApp.swift */,
 				222AB094260000DE0029163E /* ContentView.swift */,
 				222AB095260000DF0029163E /* Assets.xcassets */,
+				229069A926050A92009373FC /* Bookworm.xcdatamodeld */,
+				229069E426050CCF009373FC /* PersistenceController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -188,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				222AB0A8260000DF0029163E /* ContentView.swift in Sources */,
+				229069AB26050A92009373FC /* Bookworm.xcdatamodeld in Sources */,
 				222AB0A6260000DF0029163E /* testApp.swift in Sources */,
+				229069E526050CCF009373FC /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				222AB0A9260000DF0029163E /* ContentView.swift in Sources */,
+				229069AC26050A92009373FC /* Bookworm.xcdatamodeld in Sources */,
 				222AB0A7260000DF0029163E /* testApp.swift in Sources */,
+				229069E626050CCF009373FC /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		229069A926050A92009373FC /* Bookworm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				229069AA26050A92009373FC /* Bookworm.xcdatamodel */,
+			);
+			currentVersion = 229069AA26050A92009373FC /* Bookworm.xcdatamodel */;
+			path = Bookworm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 222AB08E260000DE0029163E /* Project object */;
 }

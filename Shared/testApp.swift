@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct testApp: App {
+    
+    let persistenceController = PersistenceController.bookworm
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, PersistenceController.bookworm.container.viewContext)
         }
     }
 }
