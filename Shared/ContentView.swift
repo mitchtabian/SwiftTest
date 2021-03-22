@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var numbers = [1,2,3,4,5,6,7,8,9,10]
+    
     var body: some View {
         NavigationView{
-            List(0..<100){ row in
-                NavigationLink(
-                    destination: Text("Detail \(row)")){
-                        Text("Row \(row)")
+            List{
+                ForEach(numbers, id: \.self){ row in
+                    NavigationLink(
+                        destination: VStack{
+                            Text("Detail \(row)")
+                            Image("apostle_islands")
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        ,
+                        label: {
+                            Text("Row \(row)")
+                        }
+                    )
                 }
+                .onDelete(perform: deleteRow)
             }
+            .navigationBarItems(leading: EditButton())
             .navigationBarTitle("SwiftUI")
         }
+    }
+    
+    func deleteRow(at offsets: IndexSet){
+        numbers.remove(atOffsets: offsets)
     }
 }
 
